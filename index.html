@@ -176,14 +176,13 @@
         
     
             var tile_layer_b1539b846ee7f270fb6b530ee74e4306 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
   "maxZoom": 20,
-  "maxNativeZoom": 20,
+  "maxNativeZoom": 16,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, HERE, Garmin, \u0026copy; OpenStreetMap contributors",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -193,6 +192,7 @@
         
     
             tile_layer_b1539b846ee7f270fb6b530ee74e4306.addTo(map_ba095cfd6af0a2d0dc87519e1f201244);
+            L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {"maxZoom": 20, "maxNativeZoom": 16}).addTo(map_ba095cfd6af0a2d0dc87519e1f201244);
         
     
             map_ba095cfd6af0a2d0dc87519e1f201244.fitBounds(
@@ -653,7 +653,7 @@
     
             var layer_control_7c6d6eb93af14aea7954e6669e6f3527_layers = {
                 base_layers : {
-                    "cartodbpositron" : tile_layer_b1539b846ee7f270fb6b530ee74e4306,
+                    "Base map" : tile_layer_b1539b846ee7f270fb6b530ee74e4306,
                 },
                 overlays :  {
                     "Petco -- Open Cat Habitats" : feature_group_f2cf987c3a8dc04314bb7847596104cb,
